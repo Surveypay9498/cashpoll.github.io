@@ -1,12 +1,194 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캐시폴 - 투표하고 리워드 받기</title>
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+        }
+        
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            word-break: keep-all;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+            color: white;
+            border-radius: 0 0 40px 40px;
+        }
+
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .subtitle { font-size: 1.2rem; opacity: 0.9; }
+
+        .section {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eef2ff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .features { grid-template-columns: 1fr; }
+        }
+
+        .feature-item {
+            padding: 15px;
+            border: 1px solid #f1f5f9;
+            border-radius: 12px;
+            transition: transform 0.2s;
+        }
+
+        .feature-item:hover { transform: translateY(-5px); }
+
+        .feature-item h3 { margin-top: 0; font-size: 1.1rem; color: #334155; }
+
+        .reward-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .reward-tag {
+            background: #fdf2f8;
+            color: #db2777;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding-bottom: 40px;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            color: #64748b;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover { text-decoration: underline; }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
+        }
+    </style>
 </head>
 <body>
-  <p>Hello, World!</p>
+
+<header>
+    <h1>🗳️ 캐시폴</h1>
+    <p class="subtitle">간단한 설문에 참여하고 리워드 받기!</p>
+</header>
+
+<div class="container">
+    <section class="section">
+        <h2>💡 캐시폴이란?</h2>
+        <p>캐시폴은 사용자들의 트렌드를 알아보기 위한 <strong>투표 기반 설문 플랫폼</strong>입니다. 복잡한 설문 없이, 간단한 선택만으로 쉽고 재미있게 리워드를 받을 수 있는 경험을 제공합니다.</p>
+    </section>
+
+    <section class="section">
+        <h2>✅ 주요 기능</h2>
+        <div class="features">
+            <div class="feature-item">
+                <h3>🗳️ 간단한 설문 참여</h3>
+                <p>"자장면 vs 짬뽕" 같은 가볍고 재미있는 질문에 투표만 하면 끝!</p>
+            </div>
+            <div class="feature-item">
+                <h3>🔒 잠금화면 설문</h3>
+                <p>앱 실행 없이도 잠금화면에서 바로 빠르게 투표하세요.</p>
+            </div>
+            <div class="feature-item">
+                <h3>🔄 매일 업데이트</h3>
+                <p>매일 다양한 주제의 새로운 설문이 여러분을 기다립니다.</p>
+            </div>
+            <div class="feature-item">
+                <h3>🎁 즉시 리워드 지급</h3>
+                <p>응답 즉시 캐시 적립! 투표할수록 리워드가 쌓입니다.</p>
+            </div>
+            <div class="feature-item">
+                <h3>📊 실시간 트렌드</h3>
+                <p>사람들의 선택을 실시간 결과로 확인해 보세요.</p>
+            </div>
+            <div class="feature-item">
+                <h3>🙈 익명성 보장</h3>
+                <p>개인정보 부담 없이 누구나 자유롭게 참여 가능합니다.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="text-align: center;">
+        <h2>💰 적립 캐시 사용처</h2>
+        <p>적립된 캐시는 다양한 보상으로 교환 가능합니다 (업데이트 예정)</p>
+        <div class="reward-list" style="justify-content: center;">
+            <span class="reward-tag">🎫 기프티콘</span>
+            <span class="reward-tag">🎟️ 문화상품권</span>
+        </div>
+    </section>
+
+    <div style="text-align: center; margin-top: 40px;">
+        <p>당신의 선택이 트렌드를 만듭니다.</p>
+        <a href="#" class="cta-button">🚀 지금 바로 시작하기</a>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="/assignment" target="_blank">이용약관</a>
+            <!-- <a href="https://www.cashpoll.shop/assignment" target="_blank">이용약관</a> -->
+            <a href="/privacy" target="_blank">개인정보처리방침</a>
+            <!-- <a href="https://www.cashpoll.shop/privacy" target="_blank">개인정보처리방침</a> -->
+        </div>
+        <p style="font-size: 0.8rem; color: #94a3b8; margin-top: 20px;">© 2024 CashPoll. All rights reserved.</p>
+    </footer>
+</div>
+
 </body>
 </html>
